@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Places</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.1.0/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <nav id='menu'>
+                <button id="toggleMode" class="toggle-button">🌞</button>
+                <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                <ul>
+                    <li><a href='index.html'><i class="fa fa-home"></i> Home</a></li>
+                    <li class="active"><a href='favorite_places.html'><i class="fa fa-location-arrow"></i> Favorite Places</a></li>
+                    <li><a href='contact.html'><i class="fa fa-commenting-o" ></i> Contact Me</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="flex-row">
+            <div class="theme flex-col title">
+                <h1>Favorite Places</h1>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="flex-row">
+            <div id="map" class="theme flex-col map"></div>
+        </div>
+        <div class="tooltip" id="tooltip"></div> <!-- Tooltip for showing titles -->
+        <div class="flex-row-multicolum">
+            <div class="theme flex-col">
+                <!-- Memories Section -->
+                <div class="memories">
+                    <h2>Place Memories</h2>
+                    <div class="memory-item" data-coords="[32.8597, 39.9256]" data-image="img/anitkabir.jpg">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> Anıtkabir
+                    </div>
+                    <div class="memory-item" data-coords="[32.8087, 39.9111]" data-image="img/armada.jpg">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> Armada
+                    </div>
+                    <div class="memory-item" data-coords="[32.7479, 39.8998]" data-image="img/odtu.jpg">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> ODTÜ
+                    </div>
+                </div>
+            </div>
+            <div class="theme flex-col">
+                <!-- Jobs Section -->
+                <div class="jobs">
+                    <h2>Place Jobs</h2>
+                    <div class="job-item" data-coords="[31.634016611952752, 39.98387482322555]" data-image="img/job1.jpg"><i class="fa fa-building-o" aria-hidden="true"></i> Yunus Emre Termik Santrali</div>
+                    <div class="job-item" data-coords="[32.82621958750053, 39.893179989282494]" data-image="img/job2.jpg"><i class="fa fa-building-o" aria-hidden="true"></i> Koni Mühendislik</div>
+                    <div class="job-item" data-coords="[32.80109689906386, 39.917060073973815]" data-image="img/job3.jpg"><i class="fa fa-building-o" aria-hidden="true"></i> Kartallar Holding</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-row bottom">
+            <div class="theme flex-col copyright">
+                <span>© 2024 Ufuk ERKAN. All rights reserved.</span>
+            </div>
+        </div>
+        <!-- Modal for displaying photos -->
+        <div class="overlay"></div>
+        <div class="modal">
+            <img id="modalImage" src="" alt="Memory Image">
+            <button class="modal-close">Kapat</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

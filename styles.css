@@ -1,0 +1,505 @@
+/* Temel stiller */
+body {
+    /*background-image: url('background.jpg'); /* Arka plan resmi */
+    /*background-size: cover; /* Resmin tüm alanı kaplamasını sağlar */
+    /*background-repeat: no-repeat; /* Resmin tekrar etmesini engeller */
+    /*background-position: center; /* Resmi ortalar */
+    /*transition: background-color 0.3s, color 0.3s; /* Geçiş animasyonu */
+    /*color: #000000; /* Varsayılan metin rengi */
+    background: rgb(0, 36, 4);
+    background: linear-gradient(0deg, rgb(0, 99, 12) 0%, rgb(13, 168, 29) 59%, rgba(14, 201, 0, 1) 100%);
+    background-repeat: no-repeat;
+    /* Resmin tekrar etmesini engeller */
+    background-size: cover;
+    color: #000;
+    /* Varsayılan metin rengi */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Gece modunda arka plan rengi */
+body.night {
+    background-image: none;
+    /* Gece modunda arka plan resmi yok */
+    background-color: #000;
+    /* Gece arka plan rengi */
+    color: #fff;
+    /* Gece metin rengi */
+}
+
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Gece modu */
+body.night {
+    background: linear-gradient(180deg, rgba(0, 36, 4, 1) 0%, rgb(7, 80, 14) 59%, rgb(8, 119, 0) 100%);
+    color: white;
+}
+
+body.night nav a {
+    color: white;
+}
+
+body.night button {
+    color: white;
+}
+
+
+
+#menu {
+    background: #006605;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#menu ul,
+#menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+}
+
+#menu ul {
+    width: 100%;
+    text-align: center;
+}
+
+#menu li {
+    display: inline-block;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: 50px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.active {
+    background-color: #05be18;
+}
+
+#menu a.dropdown-arrow:after {
+    content: "\25BE";
+    margin-left: 5px;
+}
+
+#menu li a:hover {
+    color: #FFFFFF;
+    background: #00D514;
+}
+
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer
+}
+
+#menu label {
+    display: none;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    left: 35px
+}
+
+#menu label:before {
+    font-size: 1.6em;
+    color: #FFFFFF;
+    content: "\2261";
+    margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: #444444;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#menu ul.sub-menus li {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+#menu ul.sub-menus a {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#menu li:hover ul.sub-menus {
+    display: block
+}
+
+#menu ul.sub-menus a:hover {
+    background: #F2F2F2;
+    color: #444444;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    right: 10px;
+    margin-top: 10px;
+    z-index: 999;
+    position: relative;
+    float: right;
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        position: relative
+    }
+
+    #menu ul {
+        background: #444444;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none;
+        text-align: left;
+    }
+
+    #menu ul.sub-menus {
+        width: 100%;
+        position: static;
+    }
+
+    #menu ul.sub-menus a {
+        padding-left: 30px;
+    }
+
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+
+    #menu input,
+    #menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block
+    }
+
+    #menu input {
+        z-index: 4
+    }
+
+    #menu input:checked+label {
+        color: #FFFFFF
+    }
+
+    #menu input:checked+label:before {
+        content: "\00d7"
+    }
+
+    #menu input:checked~ul {
+        display: block
+    }
+
+    .toggle-button {
+        margin-top: 10px;
+        /* Üstten mesafe */
+        right: 10px;
+        /* Sağdan mesafe */
+    }
+}
+
+
+.section {
+    display: inline;
+    width: 100%;
+}
+
+.theme {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(5px) !important;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #023600;
+    color: #fff;
+}
+
+.bg {
+    background-image: url("bg-2.png");
+    background-size: cover;
+}
+
+.head_img {
+    width: 100%;
+    text-align: center;
+}
+
+.head_img>img {
+    width: 200px;
+    text-align: center;
+    border-radius: 50%;
+    border: 5px solid #023600;
+    filter: drop-shadow(0px 0px 20px #023600);
+}
+
+.col-6 {
+    width: 49%;
+    display: inline-block;
+}
+
+.flex-row {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright {
+    color: #fff;
+    background-image: url("bg.png");
+    background-size: cover;
+    text-shadow: 0px 0px 10px #023600;
+    font-weight: 600;
+}
+.center{
+    text-align: center;
+}
+.title {
+    color: #fff;
+    background-image: url("bg.png");
+    background-size: cover;
+}
+
+.title>h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-shadow: 0px 0px 10px #023600;
+}
+
+.flex-col {
+    width: 100%;
+    padding: 15px;
+    margin: 0 1%;
+    transition: transform 0.3s ease;
+}
+
+.flex-row-multicolum {
+
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+}
+
+.flex-row-multicolum .flex-col {
+    width: 45%;
+    margin: 0 1% 1%;
+    transition: transform 0.3s ease;
+    
+}
+.flex-col:hover{
+    transform: scale(1.005);
+}
+
+@media screen and (max-width: 800px) {
+    .flex-row-multicolum .flex-col {
+        width: 100%;
+        margin: 0 1% 1%
+    }
+}
+
+p {
+    text-align: justify;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+/* Memories and Jobs section */
+.memories,
+.jobs {
+    margin-top: 20px;
+}
+
+.memory-item,
+.job-item {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #023600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.memory-item:hover,
+.job-item:hover {
+    background-color: #ddd;
+}
+
+/* Modal for displaying images */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.modal img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow:0px 0px 10px #000000;
+}
+
+.modal-close {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    display: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* Custom marker style */
+.marker {
+    width: 30px;
+    height: 30px;
+    background-image: url('https://cdn.pixabay.com/photo/2013/07/12/17/00/location-151669_960_720.png');
+    /* Custom marker image */
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.ol-viewport {
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #023600;
+}
+
+.map {
+    padding: 0px !important;
+}
+.fa{
+    margin-right: 10px;
+}
+h2{
+    text-shadow: 0px 0px 10px #023600;
+}
+
+.contact-icons {
+    gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    position: relative;
+    /* Tooltip için relative konumlandırma */
+    text-decoration: none;
+
+}
+
+.contact-icons img {
+    background-color: #006605;
+    padding: 10px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 10px #006605;
+}
+
+.contact-icons a:hover img {
+    transform: scale(1.1);
+    /* Hover durumunda logoyu büyütme */
+}
+
+/* Tooltip stili */
+.contact-icons a::after {
+    content: attr(data-tooltip);
+    /* Verilen tooltip içeriği */
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.contact-icons a:hover::after {
+    opacity: 1;
+    /* Hover durumunda tooltip görünecek */
+}
+.bottom{
+    bottom: 10px;
+}
+section{
+    margin-bottom: 100px;
+}

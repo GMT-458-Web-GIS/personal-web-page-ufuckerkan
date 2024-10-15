@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <nav id='menu'>
+                <button id="toggleMode" class="toggle-button">🌞</button>
+                <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                <ul>
+                    <li><a href='index.html'><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href='favorite_places.html'><i class="fa fa-location-arrow"></i> Favorite Places</a></li>
+                    <li class="active"><a href='contact.html'><i class="fa fa-commenting-o"></i> Contact Me</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="flex-row">
+            <div class="theme flex-col title">
+                <h1>Get in Touch</h1>
+            </div>
+        </div>
+
+        <section>
+            <center>
+                <div class="contact-icons">
+                    <!-- Gmail (Tooltip: Email adresi) -->
+                    <a href="mailto:ufukerkan0@gmail.com" data-tooltip="ufukerkan0@gmail.com">
+                        <img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt="Gmail Logo">
+                    </a>
+
+                    <!-- LinkedIn (Tooltip: İsim) -->
+                    <a href="https://tr.linkedin.com/in/ufuk-erkan-5b6317238" target="_blank" data-tooltip="Ufuk Erkan">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                            alt="LinkedIn Logo">
+                    </a>
+
+                    <!-- Telefon (Tooltip: Telefon numarası) -->
+                    <a href="tel:+905532317987" data-tooltip="+90 553 231 79 87">
+                        <img src="https://t4.ftcdn.net/jpg/04/63/63/59/360_F_463635935_IweuYhCqZRtHp3SLguQL8svOVroVXvvZ.jpg"
+                            alt="Phone Icon">
+                    </a>
+                </div>
+            </center>
+
+
+        </section>
+        <div class="flex-row bottom">
+            <div class="theme flex-col copyright">
+                <span>© 2024 Ufuk ERKAN. All rights reserved.</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
