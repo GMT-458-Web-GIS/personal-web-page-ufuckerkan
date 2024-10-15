@@ -1,5 +1,6 @@
 Link:  [https://gmt-458-web-gis.github.io/personal-web-page-ufuckerkan/](https://gmt-458-web-gis.github.io/personal-web-page-ufuckerkan/)
 # Project Content
+**Responsive design was produced using CSS. Mobile, Tablet and PC compatible.**
 ## First
 - I briefly explained myself, my department and the things I do related to my department in the about me section.
   ![image](https://github.com/user-attachments/assets/6b95cfcc-2e9a-4e56-89f5-c67c5bb62974)
